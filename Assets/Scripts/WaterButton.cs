@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class WaterButton : MonoBehaviour {
 
-    public string element = "Fire";
+    public string element = "Water";
     public bool isClicked; //アクティブかどうか
 
 

@@ -7,24 +7,20 @@ public class Select : MonoBehaviour {
 
     public GameObject fire;
     public GameObject water;
-    ElementManager objectSomething;
-
-    string elementText;
 
     public Text ResultText;
+
+    string elementText;
 
 	// Use this for initialization
 	void Start () {
 		
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     public void SelectButton(){
         ResultText.text = "";
+        elementText = "";
 
         if(fire.GetComponent<FireButton>().isClicked){
             elementText += "Fire, ";

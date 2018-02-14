@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ElementManager : MonoBehaviour {
 
-    //string[] ElementArray = { "Fire", "Water", "Air", "Ground", "Kaminari"};
     string[] ElementArray = { "Fire", "Water" };
 
     bool fireElementActived = false;
@@ -15,22 +14,6 @@ public class ElementManager : MonoBehaviour {
 
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    public bool CheckElementAcitve(string element){
-        switch (element){
-            case "Fire":
-
-                break;
-        }
-
-
-        return true;
-    }
 
     public bool IsFireButtonPressed(){
         if (fireElementActived) {
@@ -40,6 +23,16 @@ public class ElementManager : MonoBehaviour {
             fireElementActived = true;
             return false;
         }
-
     }
+
+    //public bool CheckElementAcitve(string element){
+    //    switch (element){
+    //        case "Fire":
+
+    //            break;
+    //    }
+
+
+    //    return true;
+    //}
 }
