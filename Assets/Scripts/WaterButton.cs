@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class WaterButton : MonoBehaviour {
 
-    public string element = "Fire";
+    public string element = "Water";
     public bool isClicked; //アクティブかどうか
 
 
@@ -23,11 +23,11 @@ public class WaterButton : MonoBehaviour {
     public void Pressed(){
         if(isClicked){
             isClicked = !isClicked;
-            GameObject.Find("WaterText").GetComponent<Text>().text = "Water";
+            GameObject.Find("WaterText").GetComponent<Text>().text = element;
 
         }else{
             isClicked = !isClicked;
-            GameObject.Find("WaterText").GetComponent<Text>().text = "Water\nPressed";
+            GameObject.Find("WaterText").GetComponent<Text>().text = element + "\nPressed";
 
         }
     }

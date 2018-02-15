@@ -241,7 +241,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ElementManager.cs" />
-    <Compile Include="Assets\Scripts\FireButton.cs" />
+    <Compile Include="Assets\Scripts\ElementButton.cs" />
     <Compile Include="Assets\Scripts\Select.cs" />
     <Compile Include="Assets\Scripts\WaterButton.cs" />
   </ItemGroup>

@@ -5,16 +5,16 @@ using UnityEngine.UI;
 
 public class Select : MonoBehaviour {
 
-    public GameObject fire;
-    public GameObject water;
-    ElementManager objectSomething;
+    //public GameObject fire;
+    //public GameObject water;
+    ElementManager manager;
 
     string elementText;
-
     public Text ResultText;
 
 	// Use this for initialization
 	void Start () {
+        manager = GameObject.Find("ElementManager").GetComponent<ElementManager>();
 		
 	}
 	
@@ -25,13 +25,10 @@ public class Select : MonoBehaviour {
 
     public void SelectButton(){
         ResultText.text = "";
+        elementText = "";
 
-        if(fire.GetComponent<FireButton>().isClicked){
-            elementText += "Fire, ";
-        }
-        if (water.GetComponent<WaterButton>().isClicked) {
-            elementText += "Water, ";
-        }
+        //セレクトボタンもゲームのステータスは持たない。マネージャー
+        elementText = manager.GetElementText();
 
         ResultText.text = elementText;
 

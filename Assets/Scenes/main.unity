@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 166339347}
   - component: {fileID: 166339346}
   m_Layer: 5
-  m_Name: ShowDicision
+  m_Name: DicisionShowText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -340,7 +340,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 172974032}
-        m_MethodName: Pressed
+        m_MethodName: pressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -364,7 +364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.6156863, b: 0.8666667, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -393,11 +393,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 172974027}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b8419c0c357c40d3bb8427d8921927d, type: 3}
+  m_Script: {fileID: 11500000, guid: 6727308e911f24f019bc4a2e4d03bf48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   element: Water
-  isClicked: 0
 --- !u!1 &241831580
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,6 +409,7 @@ GameObject:
   - component: {fileID: 241831583}
   - component: {fileID: 241831582}
   - component: {fileID: 241831585}
+  - component: {fileID: 241831586}
   m_Layer: 5
   m_Name: FireButton
   m_TagString: Untagged
@@ -475,7 +475,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 241831585}
+      - m_Target: {fileID: 241831586}
         m_MethodName: pressed
         m_Mode: 1
         m_Arguments:
@@ -500,7 +500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9338235, g: 0.10299523, b: 0.10299523, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -532,8 +532,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4faca4575a70a469fa79c9473ca8e6f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &241831586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 241831580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6727308e911f24f019bc4a2e4d03bf48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   element: Fire
-  isClicked: 0
 --- !u!1 &512903129
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,7 +555,7 @@ GameObject:
   - component: {fileID: 512903132}
   - component: {fileID: 512903131}
   m_Layer: 5
-  m_Name: WaterText
+  m_Name: elementText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -659,7 +669,7 @@ GameObject:
   - component: {fileID: 854353337}
   - component: {fileID: 854353336}
   m_Layer: 5
-  m_Name: FireText
+  m_Name: elementText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1235,6 +1245,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55875a19f1c9e42c5aa7080498b2b316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fire: {fileID: 241831580}
-  water: {fileID: 172974027}
   ResultText: {fileID: 166339346}
